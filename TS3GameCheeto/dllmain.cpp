@@ -4,7 +4,7 @@
 DWORD WINAPI Thread() {
     AllocateConsole();
     cout << "Welcome to my new Cheeto for The Sims 3... Created By CheeZeDark(Rikko Matsumato)" << endl;
-    World_SetTestingCheatsEnabledImpl_t SetTestingCheats = *(World_SetTestingCheatsEnabledImpl_t*)TS3_Offset::ps3_settestcheat;
+    World_SetTestingCheatsEnabledImpl_t SetTestingCheats = *(World_SetTestingCheatsEnabledImpl_t*)TS3_Offset::ts3_settestcheat;
     SetTestingCheats();
     cout << "Success" << endl;
     return TRUE;
@@ -26,4 +26,5 @@ BOOL APIENTRY DllMain( HMODULE hModule,
     }
     return TRUE;
 }
+
 
